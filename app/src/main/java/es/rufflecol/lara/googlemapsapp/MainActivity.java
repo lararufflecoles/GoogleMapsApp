@@ -8,10 +8,11 @@ import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity {
-
-    private GoogleMap map;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+
+
+
+
 
 
     // Toolbar
