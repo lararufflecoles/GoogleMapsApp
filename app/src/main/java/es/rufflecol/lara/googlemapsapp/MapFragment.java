@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
 
 public class MapFragment extends SupportMapFragment implements
         OnMapReadyCallback, // interface
@@ -41,14 +42,20 @@ public class MapFragment extends SupportMapFragment implements
     public void onMapReady(GoogleMap map) {
         initialiseMap();
 
-        map.addMarker(new MarkerOptions()
-                .position(new LatLng(51.483550, 0.005468))
-                .title("First home for two bees"))
-                .setSnippet("June 10th 2010 to July 4th 2014");
-        map.addMarker(new MarkerOptions()
-                .position(new LatLng(51.511028, -0.117194))
-                .title("Somerset House"))
-                .setSnippet("Head here for Film4 Summer Screen");
+        List<MarkerOptions> markerOptionsListArray = MarkerPointsData.fetchData();
+        for (MarkerOptions aMarker : markerOptionsListArray) {
+            map.addMarker(aMarker);
+        }
+
+
+//        map.addMarker(new MarkerOptions()
+//                .position(new LatLng(51.483550, 0.005468))
+//                .title("First home for two bees"))
+//                .setSnippet("June 10th 2010 to July 4th 2014");
+//        map.addMarker(new MarkerOptions()
+//                .position(new LatLng(51.511028, -0.117194))
+//                .title("Somerset House"))
+//                .setSnippet("Head here for Film4 Summer Screen");
     }
 
     @Override
