@@ -23,43 +23,33 @@ public class MapFragment extends SupportMapFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getMapAsync(this); // method of SupportMapFragment
+        getMapAsync(this); // method SupportMapFragment
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) /* method of MapFragment */ {
         super.onViewCreated(view, savedInstanceState);
         setHasOptionsMenu(true);
     }
 
-    private void initialiseMap() {
+    private void initialiseMap() /* Method I created, not one called from any of the classes or interfaces added above */ {
         getMap().setMyLocationEnabled(true);
         getMap().getUiSettings().setZoomControlsEnabled(true);
         getMap().setOnMyLocationChangeListener(this);
     }
 
     @Override
-    public void onMapReady(GoogleMap map) {
+    public void onMapReady(GoogleMap map) /* method of MapFragment */ {
         initialiseMap();
 
         List<MarkerOptions> markerOptionsListArray = MarkerPointsData.fetchData();
         for (MarkerOptions aMarker : markerOptionsListArray) {
             map.addMarker(aMarker);
         }
-
-
-//        map.addMarker(new MarkerOptions()
-//                .position(new LatLng(51.483550, 0.005468))
-//                .title("First home for two bees"))
-//                .setSnippet("June 10th 2010 to July 4th 2014");
-//        map.addMarker(new MarkerOptions()
-//                .position(new LatLng(51.511028, -0.117194))
-//                .title("Somerset House"))
-//                .setSnippet("Head here for Film4 Summer Screen");
     }
 
     @Override
-    public void onMyLocationChange(Location location) {
+    public void onMyLocationChange(Location location) /* method of Map Fragment */ {
         if (flag) {
             CameraPosition position = CameraPosition.builder()
                     .target(new LatLng(location.getLatitude(), location.getLongitude()))
@@ -70,3 +60,23 @@ public class MapFragment extends SupportMapFragment implements
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//        map.addMarker(new MarkerOptions()
+//                .position(new LatLng(51.483550, 0.005468))
+//                .title("First home for two bees"))
+//                .setSnippet("June 10th 2010 to July 4th 2014");
+//        map.addMarker(new MarkerOptions()
+//                .position(new LatLng(51.511028, -0.117194))
+//                .title("Somerset House"))
+//                .setSnippet("Head here for Film4 Summer Screen");
