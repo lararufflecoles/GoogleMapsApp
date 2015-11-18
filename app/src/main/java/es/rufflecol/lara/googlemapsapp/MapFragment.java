@@ -2,7 +2,6 @@ package es.rufflecol.lara.googlemapsapp;
 
 import android.content.Intent;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -60,14 +59,51 @@ public class MapFragment extends SupportMapFragment implements
     @Override
     public void onInfoWindowClick(Marker marker) {
 
+        // getActivity should be called whenever you need a context within a fragment
+
         switch (marker.getTitle()) {
-            case "Tuskar Street":
-                Intent intentTuskarStreet = new Intent(getActivity(), MarkerDetailActivity.class); // getActivity should be called whenever you need a context within a fragment
-                startActivity(intentTuskarStreet);
+            case "Charlton House":
+                Intent intentCharltonHouse = new Intent(getActivity(), DetailActivity.class);
+                intentCharltonHouse.putExtra("activityDetailTitle", R.string.charlton_house_detail_title);
+                intentCharltonHouse.putExtra("activityDetailImage", R.drawable.bm);
+                intentCharltonHouse.putExtra("activityDetailText", R.string.activity_detail_text);
+                startActivity(intentCharltonHouse);
                 break;
             case "Somerset House":
-                Intent intentSomersetHouse = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.somersethouse.org.uk"));
+                Intent intentSomersetHouse = new Intent(getActivity(), DetailActivity.class);
                 startActivity(intentSomersetHouse);
+                break;
+            case "Wild Honey":
+                Intent intentWildHoney = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentWildHoney);
+                break;
+            case "The Founders Arms":
+                Intent intentTheFoundersArms = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentTheFoundersArms);
+                break;
+            case "Nandos":
+                Intent intentNandos = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentNandos);
+                break;
+            case "The Shard":
+                Intent intentTheShard = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentTheShard);
+                break;
+            case "John Lewis":
+                Intent intentJohnLewis = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentJohnLewis);
+                break;
+            case "One New Change":
+                Intent intentOneNewChange = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentOneNewChange);
+                break;
+            case "Saint Dunstan in the East":
+                Intent intentSainDunstanInTheEast = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentSainDunstanInTheEast);
+                break;
+            case "Bodeans":
+                Intent intentBodeans = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intentBodeans);
                 break;
         }
     }

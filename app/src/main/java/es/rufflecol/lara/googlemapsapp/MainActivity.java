@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_share:
                 openShare();
                 return true;
-            case R.id.action_search:
-                openSearch();
-                return true;
             case R.id.action_settings:
                 openSettings();
                 return true;
@@ -50,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Methods with no return type - void ones
     private void openShare() {
-    }
-
-    private void openSearch() {
     }
 
     private void openSettings() {
