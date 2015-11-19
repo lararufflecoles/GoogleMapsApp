@@ -17,11 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-
-
-
-
-
     // Toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

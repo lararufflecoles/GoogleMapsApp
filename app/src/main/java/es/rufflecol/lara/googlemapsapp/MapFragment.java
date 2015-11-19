@@ -16,8 +16,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 
 public class MapFragment extends SupportMapFragment implements
-        OnMapReadyCallback, // interface
-        GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener /* interface */ {
+        OnMapReadyCallback, GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener /* interfaces */ {
 
     private boolean flag = true;
 
