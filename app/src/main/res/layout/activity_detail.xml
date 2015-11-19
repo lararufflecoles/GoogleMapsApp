@@ -24,7 +24,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/bmImageView"
+                android:id="@+id/activity_detail_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/toolbar"
@@ -34,10 +34,21 @@
                 android:paddingTop="@dimen/misc_padding" />
 
             <TextView
-                android:id="@+id/tutorial_screen_text"
+                android:id="@+id/activity_detail_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/bmImageView"
+                android:layout_below="@+id/activity_detail_image_view"
+                android:paddingLeft="@dimen/misc_padding"
+                android:paddingRight="@dimen/misc_padding"
+                android:paddingTop="@dimen/misc_padding"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/activity_detail_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_detail_url"
                 android:paddingLeft="@dimen/misc_padding"
                 android:paddingRight="@dimen/misc_padding"
                 android:paddingTop="@dimen/misc_padding"

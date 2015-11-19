@@ -65,45 +65,82 @@ public class MapFragment extends SupportMapFragment implements
             case "Charlton House":
                 Intent intentCharltonHouse = new Intent(getActivity(), DetailActivity.class);
                 intentCharltonHouse.putExtra("activityDetailTitle", R.string.charlton_house_detail_title);
-                intentCharltonHouse.putExtra("activityDetailImage", R.drawable.bm);
+                intentCharltonHouse.putExtra("activityDetailImage", R.drawable.charlton_house);
+                intentCharltonHouse.putExtra("activityDetailUrl", R.string.charlton_house_url_link);
                 intentCharltonHouse.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentCharltonHouse);
                 break;
             case "Somerset House":
                 Intent intentSomersetHouse = new Intent(getActivity(), DetailActivity.class);
+                intentSomersetHouse.putExtra("activityDetailTitle", R.string.somerset_house_detail_title);
+                intentSomersetHouse.putExtra("activityDetailImage", R.drawable.somerset_house);
+                intentSomersetHouse.putExtra("activityDetailUrl", R.string.somerset_house_url_link);
+                intentSomersetHouse.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentSomersetHouse);
                 break;
             case "Wild Honey":
                 Intent intentWildHoney = new Intent(getActivity(), DetailActivity.class);
+                intentWildHoney.putExtra("activityDetailTitle", R.string.wild_honey_detail_title);
+                intentWildHoney.putExtra("activityDetailImage", R.drawable.wild_honey);
+                intentWildHoney.putExtra("activityDetailUrl", R.string.wild_honey_url_link);
+                intentWildHoney.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentWildHoney);
                 break;
             case "The Founders Arms":
                 Intent intentTheFoundersArms = new Intent(getActivity(), DetailActivity.class);
+                intentTheFoundersArms.putExtra("activityDetailTitle", R.string.the_founders_arms_detail_title);
+                intentTheFoundersArms.putExtra("activityDetailImage", R.drawable.the_founders_arms);
+                intentTheFoundersArms.putExtra("activityDetailUrl", R.string.the_founders_arms_url_link);
+                intentTheFoundersArms.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentTheFoundersArms);
                 break;
-            case "Nandos":
-                Intent intentNandos = new Intent(getActivity(), DetailActivity.class);
-                startActivity(intentNandos);
+            case "Nandos London Bridge":
+                Intent intentNandosLondonBridge = new Intent(getActivity(), DetailActivity.class);
+                intentNandosLondonBridge.putExtra("activityDetailTitle", R.string.nandos_london_bridge_detail_title);
+                intentNandosLondonBridge.putExtra("activityDetailImage", R.drawable.nandos_london_bridge);
+                intentNandosLondonBridge.putExtra("activityDetailUrl", R.string.nandos_london_bridge_url_link);
+                intentNandosLondonBridge.putExtra("activityDetailText", R.string.activity_detail_text);
+                startActivity(intentNandosLondonBridge);
                 break;
             case "The Shard":
                 Intent intentTheShard = new Intent(getActivity(), DetailActivity.class);
+                intentTheShard.putExtra("activityDetailTitle", R.string.the_shard_detail_title);
+                intentTheShard.putExtra("activityDetailImage", R.drawable.the_shard);
+                intentTheShard.putExtra("activityDetailUrl", R.string.the_shard_url_link);
+                intentTheShard.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentTheShard);
                 break;
             case "John Lewis":
                 Intent intentJohnLewis = new Intent(getActivity(), DetailActivity.class);
+                intentJohnLewis.putExtra("activityDetailTitle", R.string.john_lewis_detail_title);
+                intentJohnLewis.putExtra("activityDetailImage", R.drawable.john_lewis);
+                intentJohnLewis.putExtra("activityDetailUrl", R.string.john_lewis_url_link);
+                intentJohnLewis.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentJohnLewis);
                 break;
             case "One New Change":
                 Intent intentOneNewChange = new Intent(getActivity(), DetailActivity.class);
+                intentOneNewChange.putExtra("activityDetailTitle", R.string.one_new_change_detail_title);
+                intentOneNewChange.putExtra("activityDetailImage", R.drawable.one_new_change);
+                intentOneNewChange.putExtra("activityDetailUrl", R.string.one_new_change_url_link);
+                intentOneNewChange.putExtra("activityDetailText", R.string.activity_detail_text);
                 startActivity(intentOneNewChange);
                 break;
             case "Saint Dunstan in the East":
-                Intent intentSainDunstanInTheEast = new Intent(getActivity(), DetailActivity.class);
-                startActivity(intentSainDunstanInTheEast);
+                Intent intentSaintDunstanInTheEast = new Intent(getActivity(), DetailActivity.class);
+                intentSaintDunstanInTheEast.putExtra("activityDetailTitle", R.string.saint_dunstan_in_the_east_detail_title);
+                intentSaintDunstanInTheEast.putExtra("activityDetailImage", R.drawable.saint_dunstan_in_the_east);
+                intentSaintDunstanInTheEast.putExtra("activityDetailUrl", R.string.saint_dunstan_in_the_east_url_link);
+                intentSaintDunstanInTheEast.putExtra("activityDetailText", R.string.activity_detail_text);
+                startActivity(intentSaintDunstanInTheEast);
                 break;
-            case "Bodeans":
-                Intent intentBodeans = new Intent(getActivity(), DetailActivity.class);
-                startActivity(intentBodeans);
+            case "Bodeans Tower Hill":
+                Intent intentBodeansTowerHill = new Intent(getActivity(), DetailActivity.class);
+                intentBodeansTowerHill.putExtra("activityDetailTitle", R.string.bodeans_tower_hill_detail_title);
+                intentBodeansTowerHill.putExtra("activityDetailImage", R.drawable.bodeans_tower_hill);
+                intentBodeansTowerHill.putExtra("activityDetailUrl", R.string.bodeans_tower_hill_url_link);
+                intentBodeansTowerHill.putExtra("activityDetailText", R.string.activity_detail_text);
+                startActivity(intentBodeansTowerHill);
                 break;
         }
     }

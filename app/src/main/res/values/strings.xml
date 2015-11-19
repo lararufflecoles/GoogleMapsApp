@@ -12,12 +12,25 @@
     <string name="somerset_house_detail_title">Somerset House</string>
     <string name="wild_honey_detail_title">Wild Honey</string>
     <string name="the_founders_arms_detail_title">The Founders Arms</string>
-    <string name="nandos_detail_title">Nandos</string>
+    <string name="nandos_london_bridge_detail_title">Nandos</string>
     <string name="the_shard_detail_title">The Shard</string>
     <string name="john_lewis_detail_title">John Lewis</string>
     <string name="one_new_change_detail_title">One New Change</string>
     <string name="saint_dunstan_in_the_east_detail_title">Saint Dunstan in the East</string>
-    <string name="bodeans_detail_title">Bodeans</string>
+    <string name="bodeans_tower_hill_detail_title">Bodeans</string>
+
+    <!--Activity Detail URLs-->
+
+    <string name="charlton_house_url_link"><a href="http://www.charlton-house.org">Website</a></string>
+    <string name="somerset_house_url_link"><a href="http://www.somersethouse.org.uk">Website</a></string>
+    <string name="wild_honey_url_link"><a href="http://wildhoneyrestaurant.co.uk">Website</a></string>
+    <string name="the_founders_arms_url_link"><a href="http://www.foundersarms.co.uk">Website</a></string>
+    <string name="nandos_london_bridge_url_link"><a href="http://www.nandos.co.uk/restaurant/clink-street-london">Website</a></string>
+    <string name="the_shard_url_link"><a href="http://www.the-shard.com">Website</a></string>
+    <string name="john_lewis_url_link"><a href="http://www.johnlewis.com/our-shops/oxford-street">Website</a></string>
+    <string name="one_new_change_url_link"><a href="http://www.onenewchange.com">Website</a></string>
+    <string name="saint_dunstan_in_the_east_url_link"><a href="http://www.cityoflondon.gov.uk/things-to-do/green-spaces/city-gardens/visitor-information/Pages/St-Dunstan-in-the-East.aspx">Website</a></string>
+    <string name="bodeans_tower_hill_url_link"><a href="http://www.bodeansbbq.com/site/towerhill">Website</a></string>
 
     <string name="activity_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

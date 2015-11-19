@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -22,10 +23,6 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-//      String activityDetailString = intent.getStringExtra("activityDetail");
-//      TextView textView = (TextView) findViewById(R.id.tutorial_screen_text);
-//      textView.setText(activityDetailString);
-
         int activityDetailTitle = intent.getIntExtra("activityDetailTitle", -1);
         if (activityDetailTitle != -1) {
             setTitle(activityDetailTitle);
@@ -35,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
 
         int activityDetailImage = intent.getIntExtra("activityDetailImage", -1);
         if (activityDetailImage != -1) {
-            ImageView imageView = (ImageView) findViewById(R.id.bmImageView);
+            ImageView imageView = (ImageView) findViewById(R.id.activity_detail_image_view);
             imageView.setImageResource(activityDetailImage);
         } else {
             Toast.makeText(this, "Error, no image available", Toast.LENGTH_SHORT).show();
@@ -43,10 +40,19 @@ public class DetailActivity extends AppCompatActivity {
 
         int activityDetailText = intent.getIntExtra("activityDetailText", -1);
         if (activityDetailText != -1) {
-            TextView textView = (TextView) findViewById(R.id.tutorial_screen_text);
+            TextView textView = (TextView) findViewById(R.id.activity_detail_text);
             textView.setText(activityDetailText);
         } else {
             Toast.makeText(this, "Error, no detail available", Toast.LENGTH_SHORT).show();
+        }
+
+        int activityDetailUrl = intent.getIntExtra("activityDetailUrl", -1);
+        if (activityDetailUrl != -1) {
+            TextView textView = (TextView) findViewById(R.id.activity_detail_url);
+            textView.setText(activityDetailUrl);
+            if (textView != null) {
+                textView.setMovementMethod(LinkMovementMethod.getInstance());
+            }
         }
     }
 
