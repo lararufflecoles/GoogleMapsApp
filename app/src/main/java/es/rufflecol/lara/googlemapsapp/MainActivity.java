@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater(); // Inflate the menu; this adds items to the action bar if it is present.
-        inflater.inflate(R.menu.activity_toolbar, menu);
+        inflater.inflate(R.menu.activity_main_toolbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -29,19 +29,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
-            case R.id.action_share:
-                openShare();
-                return true;
             case R.id.action_settings:
                 openSettings();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    // Methods with no return type - void ones
-    private void openShare() {
     }
 
     private void openSettings() {

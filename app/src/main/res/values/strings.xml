@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Google Maps App</string>
+    <string name="app_name">Lara\'s Map</string>
     <string name="google_api_key">AIzaSyBgi62YNvrWgj728-nqnVmMrbs7BYX5YGY</string>
 
     <!--Toolbar-->

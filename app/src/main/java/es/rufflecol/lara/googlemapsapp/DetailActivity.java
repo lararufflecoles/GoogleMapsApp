@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater(); // Inflate the menu; this adds items to the action bar if it is present.
-        inflater.inflate(R.menu.activity_toolbar, menu);
+        inflater.inflate(R.menu.activity_detail_toolbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -88,21 +88,14 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void openShare() { // Method with no return type - void
-        Intent intent = createShareIntent(); // Calls relevant method
-        startActivity(intent);
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(activityDetailTitle));
+        sendIntent.putExtra(Intent.EXTRA_TEXT, getString(activityDetailText));
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.action_share)));
     }
 
     private void openSettings() { // Method with no return type - void
-    }
-
-    // See above in onCreateOptionsMenu
-    private Intent createShareIntent() {
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain"); // "text/plain" is a MIME file type
-        intent.putExtra(Intent.EXTRA_SUBJECT, getString(activityDetailTitle));
-        intent.putExtra(Intent.EXTRA_TEXT, getString(activityDetailText));
-
-        Intent chooser = Intent.createChooser(intent, "Share");
-        return chooser;
     }
 }
