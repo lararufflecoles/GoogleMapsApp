@@ -89,10 +89,12 @@ public class DetailActivity extends AppCompatActivity {
 
     private void openShare() { // Method with no return type - void
         Intent sendIntent = new Intent();
+
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(activityDetailTitle));
         sendIntent.putExtra(Intent.EXTRA_TEXT, getString(activityDetailText));
         sendIntent.setType("text/plain");
+
         startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.action_share)));
     }
 
