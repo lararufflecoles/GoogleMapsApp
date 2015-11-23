@@ -3,6 +3,9 @@ package es.rufflecol.lara.googlemapsapp;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,7 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 
 public class MapFragment extends SupportMapFragment implements
-        OnMapReadyCallback, GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener /* interfaces */ {
+        OnMapReadyCallback, GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener, GoogleMap.InfoWindowAdapter /* interfaces */ {
 
     private boolean flag = true;
 
@@ -54,6 +57,24 @@ public class MapFragment extends SupportMapFragment implements
             flag = false;
         }
     }
+
+    @Override
+    public View getInfoWindow(Marker marker) {
+        return null;
+    }
+
+    @Override
+    public View getInfoContents(Marker marker) {
+
+        LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+        View view = layoutInflater.inflate(R.layout.marker, null);
+
+        TextView textView = (TextView) view.findViewById(R.id.info);
+        textView.setText(marker.getTitle());
+        textView.setText(marker.getSnippet());
+
+        return view;
+  }
 
     @Override
     public void onInfoWindowClick(Marker marker) {

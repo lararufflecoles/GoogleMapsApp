@@ -41,7 +41,7 @@ public class MarkerPointsData {
                 .title("Saint Dunstan in the East").snippet("Peaceful garden in a ruined church"));
 
         markers.add(new MarkerOptions().position(new LatLng(51.509757, -0.079081))
-                .title("Bodeans Tower Hill").snippet("All the meat, all the goodness")
+                .title("Bodeans Tower Hill").snippet("All the meat")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
                 // The red marker is default - you don't need to specify an icon unless you want something different from the default
