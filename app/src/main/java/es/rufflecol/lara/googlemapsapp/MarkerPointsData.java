@@ -26,7 +26,7 @@ public class MarkerPointsData {
                 .title("The Founders Arms").snippet("Riverside pub with superb views"));
 
         markers.add(new MarkerOptions().position(new LatLng(51.507102, -0.092107))
-                .title("Nandos London Bridge").snippet("Chicken heaven under the Cannon Street bridge arches"));
+                .title("Nandos London Bridge").snippet("Chicken heaven"));
 
         markers.add(new MarkerOptions().position(new LatLng(51.504674, -0.086300))
                 .title("The Shard").snippet("The Eye of Mordor"));
@@ -41,8 +41,8 @@ public class MarkerPointsData {
                 .title("Saint Dunstan in the East").snippet("Peaceful garden in a ruined church"));
 
         markers.add(new MarkerOptions().position(new LatLng(51.509757, -0.079081))
-                .title("Bodeans Tower Hill").snippet("All the meat")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+                .title("Bodeans Tower Hill").snippet("All the meat"));
+                //.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
                 // The red marker is default - you don't need to specify an icon unless you want something different from the default
 

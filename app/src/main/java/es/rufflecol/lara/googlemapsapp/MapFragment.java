@@ -34,6 +34,7 @@ public class MapFragment extends SupportMapFragment implements
         getMap().getUiSettings().setZoomControlsEnabled(true);
         getMap().setOnMyLocationChangeListener(this);
         getMap().setOnInfoWindowClickListener(this);
+        getMap().setInfoWindowAdapter(this);
     }
 
     @Override
@@ -69,9 +70,11 @@ public class MapFragment extends SupportMapFragment implements
         LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
         View view = layoutInflater.inflate(R.layout.marker, null);
 
-        TextView textView = (TextView) view.findViewById(R.id.info);
-        textView.setText(marker.getTitle());
-        textView.setText(marker.getSnippet());
+        TextView titleTextView = (TextView) view.findViewById(R.id.title_text);
+        titleTextView.setText(marker.getTitle());
+
+        TextView snippetTextView = (TextView) view.findViewById(R.id.snippet_text);
+        snippetTextView.setText(marker.getSnippet());
 
         return view;
   }
