@@ -13,12 +13,12 @@
     <string name="somerset_house_detail_title">Somerset House</string>
     <string name="wild_honey_detail_title">Wild Honey</string>
     <string name="the_founders_arms_detail_title">The Founders Arms</string>
-    <string name="nandos_london_bridge_detail_title">Nandos</string>
+    <string name="nandos_london_bridge_detail_title">Nandos London Bridge</string>
     <string name="the_shard_detail_title">The Shard</string>
     <string name="john_lewis_detail_title">John Lewis</string>
     <string name="one_new_change_detail_title">One New Change</string>
     <string name="saint_dunstan_in_the_east_detail_title">Saint Dunstan in the East</string>
-    <string name="bodeans_tower_hill_detail_title">Bodeans</string>
+    <string name="bodeans_tower_hill_detail_title">Bodeans Tower Hill</string>
 
     <!--Activity Detail URLs-->
     <string name="charlton_house_url_link"><a href="http://www.charlton-house.org">Website</a></string>
